@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+
+\title{Wyznaczanie stalej Planck'a}
+\author{Dymitr Lubczyk }
+\date{18 Maja 2020}
+
+\begin{document}
+
+\maketitle
+\clearpage
+\section{Czesc teoretyczna}
+\subsection{Wstep}
+W ponizszym sprawozdaniu zamierzam przedstawic przebieg doswiadczalnego wyznacznia stalej Planck'a. Bede korzystal z efektu fotoelektrycznego opisanego w 1905 roku przez Alberta Einsteina. Zjawisko to wyraza sie wzorem:
+\[ h\nu = W+E_{k} \]
+gdzie 
+
+\begin{itemize}
+  \item \(h\) - stala Planck'a
+  \item \(\nu\) - czestotliwosc padajacego swiatla
+  \item \(W\) - praca wyjscia (zalezna od materialu) 
+  \item \(E_{k}\) - energia kinetyczna elektronu  
+\end{itemize}
+Zjawisko to pokazuje miedzy innymi zaleznosc miedzy czestotliwoscia, a energia fotonu. Co wiecej widzimy, ze energia ta rowna sie sumie pracy wyjscia oraz energii kinetycznej elektronu. Na podstawie tego mozemy skonstruawac doswiadcznenie majce na celu wyznacznie stalej Planck'a.
+Wprowadzmy pojecie napiecia hamowania, zostanie ono oznaczone przez \(U_{h}\) i bedzie oznaczalo napiecie niezbedne, zeby dla danego ukladu i danej czestotliwosci swiatla prad przestal plynac. Majac na uwadze, ze w momenicie gdy w obwodzie przestaje plynac prad mamy \(E_{k}=eU_{h}\) pierwotny wzor mozemy przeksztalcic do:
+\[ h\nu = W+eU_{h} \]
+co daje liniowa zaleznosc miedzy czestotliwoscia padajacego swiatla, a napieciem hamowania i te zaleznosc bede staral sie wykorzystac, w celu wyznaczenia stalej Planck'a, ktora jest ukryta we wspolczynniku kierunkowym wspomnianej wyzej zaleznosci.
+\subsection{Uklad doswiadczalny}
+Uklad doswiadczalny sklada sie z katody i anody podlaczonych do zasilacza regulowanego z dokladnoscia do 10mV. Do uklady podlaczony jest rowniez amperamierz, w celu stwierdzenia, czy przez uklad plynie prad, jest to kluczowo do wyznaczenia \(U_{h}\). Co wiecej na uklad sklada sie lampa, z regulowana z dokladnoscia do 10nm dlugoscia fali emitowanego swiatla. Lampa ta oswietla katode w celu zainicjalizowana zjawiska fotoelektrycznego.
+\clearpage
+\section{Czesc doswiadczalna}
+\subsection{Pomiary i niepewnosci}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\(U_{h}[mV]\)   & \(\lambda[nm]\)   &\(f[THz]\) & \(u(f)[THz]\)         \\ \hline
+1110    &410    &731    &178\\ \hline
+970     &430    &697    &162\\ \hline
+910     &440    &681    &154\\ \hline
+780     &460    &652    &141\\ \hline
+570     &500    &600    &120\\ \hline
+380     &540    &550    &102\\ \hline
+260     &570    &526    &92\\ \hline
+150     &600    &500    &83\\ \hline
+
+\end{tabular}
+\caption{Napiecie hamowania, dlugosc fali oraz jej czestotliwosc wraz z niepewnoscia}
+\end{table}
+W powyzszych pomiarach przyjmujemy niepewnosc \(U_{h}\) jako \(10mV\), niepewnosc \(\lambda\) jako \(10nm\) oraz niepewnosc czestotliwosci jest wyznaczona jako  niepewnosc zlozona w zaleznosci od \(\lambda\), obliczona zgodnie ze wzorem
+\[
+u(f)=\frac{c\cdot u(\lambda)}{\lambda^2}
+\]
+\subsection{Wyznaczenie stalej Plancka}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{Planck.JPG}
+\caption{Wykres napiecia hamowania od czestotliwosci swiatla}
+\end{figure}
+
+Jak widac na powyzszym wykresie wspolczynik kieruknkowy prostej wynosi \(4.149\times\) \(10^{-15}\) [\(V \cdot s\)] oznaczmy go przez \(a\), wiemy ze:
+
+\[
+a=\frac{h}{e}
+\]
+wiec, zgodnie z powyzszym doswiadczeniem
+\[
+h=6,646\times 10^{-34} [J\cdot s] 
+\]
+z niedokladnoscia pomiarowa, sugerowana przez program Excel na poziomie \(0.0213\times 10^{-34} [J\cdot s] \)
+
+\section{Podsumowanie}
+Uwazam, ze efekt doswiadczenia jest bardzo satysfakcjonujacy, poniewaz udalo sie wyznaczyc stala Plancka z niebywala dokladnoscia, jednakze ma on wiele problemow, przede wszystkim doswiadcznie zostalo przeprowadzone na podstawie wynikow ostrzymanych z symulacji, a nie zebranych podczas faktycznego doswiadczenia, dodatkowo liczba zebranych probek jest wyjatkowo mala, co jest kolejnym brakiem. Uwazam, ze gdyby  bylo to mozlwie, bardzo ciekawym byloby odtworzenie tego doswiadczenia w fizycznym laboratorium. Tym bardziej, ze ukazuje ono znacznie wiecej niz wartosc stalej Plancka.
+\end{document}
+
